@@ -10,48 +10,49 @@ body {
 
 .container {
     background-color: #fff;
-    width: 500px; 
-    height: 500px; 
+    width: 40%;
+    min-width: 500px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    padding: 40px; 
-    border-radius: 50%; 
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.338);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .timer-display {
-    width: 90%; 
+    position: relative;
+    width: 92%;
     background: #fff;
+    left: 4%;
     font-family: 'Roboto mono', monospace;
     color: #0606b7;
     font-size: 30px;
-    padding: 20px;
-    text-align: center;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
 }
 
 .buttons {
-    width: 70%; 
+    width: 90%;
+    margin: 60px auto 0 auto;
     display: flex;
     justify-content: space-around;
-    margin-top: 20px; 
 }
 
 .buttons button {
-    width: 80px;
-    height: 40px;
+    width: 120px;
+    height: 45px;
     background-color: #f25c54;
     color: #fff;
     border: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
@@ -67,4 +68,32 @@ body {
 
 .buttons button:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.laps {
+    width: 90%;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 20px;
+    font-family: 'Roboto mono', monospace;
+    color: #0606b7;
+    text-align: center;
+    margin-left: 32px;
+    font-size: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(65, 5, 145, 0.25);
+}
+@media (max-width: 768px) {
+    .timer-display {
+        font-size: 6vw;
+        padding: 2vw;
+    }
+
+    .buttons button {
+        font-size: 3.5vw;
+    }
+
+    .laps {
+        font-size: 5vw;
+    }
 }
